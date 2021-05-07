@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import PersonRepository from '../repositories/PersonRepository';
 import CreatePersonService from '../services/CreatePersonService';
 import DeletePersonService from '../services/DeletePersonService';
+import PaginatedPersonService from '../services/PaginatedPersonService';
 import ShowPersonService from '../services/ShowPersonService';
 import UpdatePersonService from '../services/UpdatePersonService';
 
@@ -22,6 +23,19 @@ class PersonController {
     const person = await personService.execute(id)
 
     return response.json(person)
+  }
+
+  public async paginated(request: Request, response: Response): Promise<Response> {
+    const {page} = request.query;
+
+    const personRepository = new PersonRepository();
+    const personPaginated = new PaginatedPersonService(personRepository)
+
+    const AllPersonPerPage = await personPaginated.execute({
+      page: page !== undefined ? parseInt(page.toString(), 10) : 0,
+    })
+
+    return response.json(AllPersonPerPage)
   }
 
 
