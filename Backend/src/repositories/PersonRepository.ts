@@ -9,6 +9,12 @@ class PersonRepository implements IPersonRepository {
   constructor() {
     this.ormRepository = getRepository(Person)
   }
+  public async findallPaginated(page: number): Promise<[Person[], number]> {
+    return this.ormRepository.findAndCount({
+      skip: page,
+      take: 10,
+    })
+  }
   public async findByCpf(cpf: string): Promise<Person> {
     const person = await this.ormRepository.findOne({
       where: {

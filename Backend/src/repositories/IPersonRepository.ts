@@ -8,6 +8,7 @@ save(person: Person): Promise<Person>
 findByid(id: string): Promise<Person | undefined>;
 findByCpf(cpf: string): Promise<Person | undefined>;
 findAll(): Promise<Person[]>
+findallPaginated(page: number): Promise<[Person[], number]>
 }
 
 // 1 - Inserir conteúdo na tabela
