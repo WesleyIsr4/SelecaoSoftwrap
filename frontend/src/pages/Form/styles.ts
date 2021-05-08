@@ -21,10 +21,6 @@ export const Title = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  p {
-    cursor: pointer;
-  }
-
   svg {
     cursor: pointer;
     color: #ff4c00;
