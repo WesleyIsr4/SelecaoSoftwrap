@@ -33,6 +33,7 @@ export const Thead = styled.thead`
 
 export const Tbody = styled.tbody`
   background: #2a2835;
+  opacity: 0.5;
 
   svg {
     cursor: pointer;
@@ -44,11 +45,12 @@ export const Tbody = styled.tbody`
     }
   }
 
-  transition: 0.2s;
-
-  &:hover {
-    background: #3c394e;
+  td:hover {
+    opacity: 1;
+    cursor: pointer;
   }
+
+  transition: 0.2s;
 `;
 
 export const Button = styled.button`
