@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 ## 📝 Conteúdo
 
@@ -30,7 +29,7 @@ A aplicação tem o objetivo de criar cadastros de pessoas fisicas. Nele fazemos
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- 🔵 [TypeScript][typescript]
+- 🔵 [Typescript][Typescript]
 - ⚛️ [React][reactjs]
 - 💅 [Styled-components][styled-components]
 
@@ -67,6 +66,7 @@ Para padronizar o projeto, foi usado Eslint + Prettier
 <p align="center">
   <img alt="Softwrap" src=".github/Homepage.png" width="100%">
 </p>
+<hr>
 
 ```bash
 # clonando o projeto na sua maquina
