@@ -1,4 +1,4 @@
-import {Connection, createConnection, getConnection, getConnectionOptions} from 'typeorm'
+import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
 
 export default async (): Promise<Connection> => {
@@ -8,7 +8,7 @@ export default async (): Promise<Connection> => {
   console.log(process.env.NODE_ENV)
   return createConnection(
     Object.assign(defaultOptions, {
-      database: process.env.NODE_ENV === 'test' ? "test.softwrap" : defaultOptions.database
+      database: process.env.NODE_ENV === 'test jest' ? "test.softwrap" : defaultOptions.database
     })
   );
 }
