@@ -8,7 +8,7 @@
     "build": "tsc",
     "dev:server": "ts-node-dev --trace-warnings --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "test": "NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -25,6 +25,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
+    "cross-env": "^7.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
